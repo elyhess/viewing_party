@@ -8,7 +8,7 @@ describe MoviesFacade do
   end
 
   it "can return top rated movie objects", :vcr do
-    movies_facade = MoviesFacade.get_top_movies
+    movies_facade = MoviesFacade.top_movies
 
     expect(movies_facade.count).to eq(40)
     expect(movies_facade.first).to be_an_instance_of(Film)
@@ -33,7 +33,7 @@ describe MoviesFacade do
     expect(movies_facade.count).to eq(40)
     expect(movies_facade.first).to be_an_instance_of(Film)
   end
-  
+
   it 'can return upcoming', :vcr do
     movies_facade = MoviesFacade.upcoming_movies_fart
 

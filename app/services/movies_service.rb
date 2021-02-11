@@ -5,7 +5,7 @@ class MoviesService
     end
 
     def top_rated_movies
-      prepare_json("/3/movie/top_rated")
+      prepare_json('/3/movie/top_rated')
     end
 
     def find_movie(movie_id)
@@ -24,19 +24,19 @@ class MoviesService
     end
 
     def top_trending_movies
-      prepare_json("3/trending/movie/week")
+      prepare_json('3/trending/movie/week')
     end
 
     def upcoming_movies
-      response = conn.get("/3/movie/upcoming")
+      response = conn.get('/3/movie/upcoming')
       parse_data(response)
     end
 
     private
 
     def conn
-      Faraday.new(url: "https://api.themoviedb.org") do |faraday|
-          faraday.params['api_key'] = ENV["TMD_api_key"]
+      Faraday.new(url: 'https://api.themoviedb.org') do |faraday|
+        faraday.params['api_key'] = ENV['TMD_api_key']
       end
     end
 

@@ -5,7 +5,7 @@ class MoviesController < ApplicationController
     if params[:movie_name].present?
       @movies = MoviesFacade.get_movies(params[:movie_name])
     elsif params[:top_movies]
-      @movies = MoviesFacade.get_top_movies
+      @movies = MoviesFacade.top_movies
     elsif params[:trending_movies]
       @movies = MoviesFacade.weekly_top_trends
     elsif params[:upcoming_movies]

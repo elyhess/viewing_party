@@ -1,3 +1,3 @@
 class Movie < ApplicationRecord
-	has_many :parties, dependent: :destroy
+  has_many :parties, dependent: :destroy
 end
