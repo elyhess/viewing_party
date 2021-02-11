@@ -26,6 +26,6 @@ class MoviesFacade
         Film.new(movie_data)
       end
     end
-  end
 
+  end
 end
