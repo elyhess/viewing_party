@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
     elsif params[:trending_movies]
       @movies = MoviesFacade.weekly_top_trends
     elsif params[:upcoming_movies]
-        @movies = MoviesFacade.upcoming_movies_fart
+      @movies = MoviesFacade.upcoming_movies_fart
     else
       redirect_to discover_path
       flash[:alert] = "Please enter a movie title"
