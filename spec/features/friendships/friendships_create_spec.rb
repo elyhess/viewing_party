@@ -46,5 +46,19 @@ describe "as a logged in user" do
 
 			expect(page).to have_content("You're already friends with this person.")
 		end
+
+		it "I can't add myself" do
+			@user = User.create(email: "ely@me.com", password: "password")
+
+			allow_any_instance_of(Current).to receive(:user).and_return(@user)
+
+			visit dashboard_path
+
+			fill_in "friendship[email]", with: "ely@me.com"
+
+			click_button "Add Friend"
+
+			expect(page).to have_content("You Cannot Add Yourself")
+		end
 	end
 end

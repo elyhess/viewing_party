@@ -1,9 +1,11 @@
-<div class="card card-body border-primary mb-3">
-  <h2>Movie Title: <%= party.movie.title %></h2><br>
-  <h2>Starts at: <%= l party.datetime, format: :long %></h2>
-  <% if party.party_host? %>
-    <h2> Status: Hosting </h2>
-  <% else %>
-    <h2> Status: Invited </h2>
-  <% end %>
-</div>
+<% if !party.movie.nil? %>
+  <div class="card card-body border-primary mb-3">
+    <h2>Movie Title: <%= party.movie.title %></h2><br>
+    <h2>Starts at: <%= l party.datetime, format: :long %></h2>
+    <% if party.party_host? %>
+      <h2> Status: Hosting </h2>
+    <% else %>
+      <h2> Status: Invited </h2>
+    <% end %>
+  </div>
+<% end %>

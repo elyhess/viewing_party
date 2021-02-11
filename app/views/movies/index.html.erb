@@ -1,6 +1,10 @@
 <div class="border-bottom">
   <% if params[:top_movies] %>
     <h1>Movies - Top 40</h1>
+  <% elsif params[:trending_movies] %>
+    <h1>Movies - Trending</h1>
+  <% elsif params[:upcoming_movies] %>
+    <h1>Movies - Upcoming</h1>
   <% else %>
     <h1>Movies - <%= params[:movie_name] %> </h1>
   <% end %>
@@ -16,7 +20,6 @@
   </div>
 
   <div class="row row-cols-1 row-cols-md-3 mb-5">
-    <section class='movies'>
     <% @movies.each do |movie| %>
       <div class="mb-4 col-md-4">
         <div class="card h-100 border-primary">
@@ -28,7 +31,6 @@
             <p class="card-text"> Vote Average: <%= movie.vote_average %> </p>
             <p class="card-text"><%= movie.overview %></p>
           </div>
-          </section>
           <div class="card-footer d-grid gap-2">
             <%= link_to "View", movie_path(movie.id), class: 'btn btn-outline-primary stretched-link' %>
           </div>
@@ -37,4 +39,3 @@
     <% end %>
   </div>
 </div>
-<%= render partial: "shared/back" %>

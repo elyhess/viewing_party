@@ -11,7 +11,7 @@ class PartiesController < ApplicationController
     @party = Current.user.parties.new(party_params.merge(movie_id: @movie.id))
     if @party.save
       params[:party][:party_guests].each do |id|
-        party.party_guests.create(user_id: id, party_id: party.id)
+        @party.party_guests.create(user_id: id, party_id: @party.id)
       end
       redirect_to dashboard_path
     else

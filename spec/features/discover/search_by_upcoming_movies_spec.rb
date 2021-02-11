@@ -7,7 +7,7 @@ describe "as a logged in user" do
 			allow_any_instance_of(Current).to receive(:user).and_return(@user)
 		end
 
-    it 'I can see the upcmoing movie', :vcr do
+    it 'I can see the upcoming movie', :vcr do
 			visit discover_path
       
       click_button "Upcoming Movies"

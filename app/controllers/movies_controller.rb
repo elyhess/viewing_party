@@ -4,12 +4,12 @@ class MoviesController < ApplicationController
   def index
     if params[:movie_name].present?
       @movies = MoviesFacade.get_movies(params[:movie_name])
-    elsif params[:top_movies]
+    elsif params[:top_movies].present?
       @movies = MoviesFacade.top_movies
-    elsif params[:trending_movies]
+    elsif params[:trending_movies].present?
       @movies = MoviesFacade.weekly_top_trends
-    elsif params[:upcoming_movies]
-      @movies = MoviesFacade.upcoming_movies_fart
+    elsif params[:upcoming_movies].present?
+      @movies = MoviesFacade.upcoming_movies
     else
       redirect_to discover_path
       flash[:alert] = 'Please enter a movie title'

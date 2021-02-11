@@ -35,9 +35,10 @@ describe MoviesFacade do
   end
 
   it 'can return upcoming', :vcr do
-    movies_facade = MoviesFacade.upcoming_movies_fart
+    movies_facade = MoviesFacade.upcoming_movies
 
     expect(movies_facade.count).to eq(20)
     expect(movies_facade.first).to be_an_instance_of(Film)
   end
+
 end

@@ -19,7 +19,7 @@ class MoviesFacade
       Film.new(movie_data, movie_cast, movie_reviews)
     end
 
-    def upcoming_movies_fart
+    def upcoming_movies
       create_movies(MoviesService.upcoming_movies[:results])
     end
 
