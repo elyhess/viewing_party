@@ -6,5 +6,4 @@ class DashboardController < ApplicationController
     @user = Current.user
     @viewing_parties = Current.user.parties
   end
-
 end

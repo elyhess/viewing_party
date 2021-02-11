@@ -24,7 +24,7 @@ class Film
   end
 
   def render_image
-    "https://image.tmdb.org/t/p/w500" + @poster unless @poster.nil?
+    "https://image.tmdb.org/t/p/w500#{@poster}" unless @poster.nil?
   end
 
   def format_runtime

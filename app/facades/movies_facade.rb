@@ -4,7 +4,7 @@ class MoviesFacade
       create_movies(MoviesService.search_by_movie(movie))
     end
 
-    def get_top_movies
+    def top_movies
       create_movies(MoviesService.top_rated_movies)
     end
 
@@ -23,13 +23,12 @@ class MoviesFacade
       create_movies(MoviesService.upcoming_movies[:results])
     end
 
-  private
+    private
 
     def create_movies(movies_data)
       movies_data.map do |movie_data|
         Film.new(movie_data)
       end
     end
-
   end
 end
