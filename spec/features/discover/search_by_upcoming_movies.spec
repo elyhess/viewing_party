@@ -7,14 +7,14 @@ describe "as a logged in user" do
 			allow_any_instance_of(Current).to receive(:user).and_return(@user)
 		end
 
-    it 'I can see the weekly top movie trends', :vcr do
+    it 'I can see the upcmoing movie', :vcr do
 			visit discover_path
-
-      click_button "Top Trending Movies"
+      
+      click_button "Upcoming Movies"
 
       expect(current_path).to eq(movies_path)
 
-      expect(page).to have_content("Total Results: 40")
+      expect(page).to have_content("Total Results: 20")
 		end
   end
 end
