@@ -165,6 +165,7 @@ describe "as a logged in user" do
 			expect(page).to_not have_content("February 09, 2021 18:52")
 			expect(page).to_not have_content("Status: Invited")
 		end
+
 	end
 end
 
