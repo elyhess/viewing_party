@@ -26,4 +26,11 @@ describe MoviesFacade do
     expect(movies_facade.count).to eq(6)
     expect(movies_facade.first).to be_an_instance_of(Film)
   end
+
+  it 'can return top trending movies', :vcr do
+    movies_facade = MoviesFacade.weekly_top_trends
+
+    expect(movies_facade.count).to eq(40)
+    expect(movies_facade.first).to be_an_instance_of(Film)
+  end
 end

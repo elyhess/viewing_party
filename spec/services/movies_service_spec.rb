@@ -51,4 +51,22 @@ describe MoviesService do
     expect(response).to have_key(:poster_path)
     expect(response[:poster_path]).to be_a(String)
   end
+
+  it 'trending movies', :vcr do
+    response = MoviesService.top_trending_movies
+
+    expect(response).to be_an(Array)
+
+    expect(response[0]).to have_key(:poster_path)
+    expect(response[0][:poster_path]).to be_a(String)
+
+    expect(response[0]).to have_key(:title)
+    expect(response[0][:title]).to be_a(String)
+
+    expect(response[0]).to have_key(:vote_average)
+    expect(response[0][:vote_average]).to be_a(Float)
+
+    expect(response[0]).to have_key(:overview)
+    expect(response[0][:overview]).to be_a(String)
+  end
 end

@@ -23,6 +23,10 @@ class MoviesService
       parse_data(response)
     end
 
+    def top_trending_movies
+      prepare_json("3/trending/movie/week")
+    end
+
     private
 
     def conn
@@ -35,8 +39,6 @@ class MoviesService
       JSON.parse(response.body, symbolize_names: true)
     end
 
- # API exposure design, shouldnt have to make two get req's to get our one result. 
- # Design should suffice our request
     def prepare_json(path)
       page = 1
       array = []

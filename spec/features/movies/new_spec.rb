@@ -7,6 +7,7 @@ describe 'movies', :vcr do
 		 @user2 = User.create(email: "friend@me.com", password: "password") 
 		 Friendship.create(user_id: @user.id, friend_id: @user2.id)
      Movie.create(title: "Frozen ii", api_id: 330457, runtime: 104)
+     
      allow_any_instance_of(Current).to receive(:user).and_return(@user)
     end
     
