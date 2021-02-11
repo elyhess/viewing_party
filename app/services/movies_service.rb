@@ -27,6 +27,11 @@ class MoviesService
       prepare_json("3/trending/movie/week")
     end
 
+    def upcoming_movies
+      response = conn.get("/3/movie/upcoming")
+      parse_data(response)
+    end
+
     private
 
     def conn
