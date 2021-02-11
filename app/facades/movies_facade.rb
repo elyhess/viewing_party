@@ -8,6 +8,10 @@ class MoviesFacade
       create_movies(MoviesService.top_rated_movies)
     end
 
+    def weekly_top_trends
+      create_movies(MoviesService.top_trending_movies)
+    end
+
     def get_movie(movie)
       movie_data = MoviesService.find_movie(movie)
       movie_cast = MoviesService.retrieve_cast(movie)[:cast][0..9]
