@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 	delete '/logout', to: "sessions#destroy"
 
 	post '/friendships', to: "friendships#create"
-	# add friendships destroy w/ delete button
 	get '/discover', to: "discover#index"
 
 	resources :users, only: [:new, :create]

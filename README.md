@@ -59,7 +59,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```
-   git clone https://github.com/foymikek/viewing_party
+   git clone https://github.com/elyhess/viewing_party
    ```
 2. Install dependencies
    ```
@@ -84,7 +84,7 @@ OR
 
 1. Visit heroku
    ```
-   https://bloque-party.herokuapp.com/
+   https://viewi.herokuapp.com/
    ```
 
 <!-- CONTACT -->
