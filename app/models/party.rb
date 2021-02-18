@@ -8,4 +8,10 @@ class Party < ApplicationRecord
   def party_host?
     Current.user.id == user_id
   end
+
+  def add_party_guests(guest_ids)
+    guest_ids.each do |id|
+      party_guests.create(user_id: id, party_id: self.id)
+    end
+  end
 end
