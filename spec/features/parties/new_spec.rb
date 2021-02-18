@@ -90,7 +90,7 @@ describe "As a logged in user" do
 			expect(current_path).to eq(dashboard_path)
 		end
 
-		it 'can create a party with guests', :vcr do
+		it 'cant create a party without guests', :vcr do
 			@user = User.create(email: "ely@me.com", password: "password")
 			@user2 = User.create(email: "friend@me.com", password: "password")
 
