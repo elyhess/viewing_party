@@ -89,5 +89,24 @@ describe "As a logged in user" do
 
 			expect(current_path).to eq(dashboard_path)
 		end
+
+		it 'can create a party with guests', :vcr do
+			@user = User.create(email: "ely@me.com", password: "password")
+			@user2 = User.create(email: "friend@me.com", password: "password")
+
+			Friendship.create(user_id: @user.id, friend_id: @user2.id)
+
+			allow_any_instance_of(Current).to receive(:user).and_return(@user)
+
+			visit movie_path(109445)
+
+			click_button "Create Movie Party"
+
+			fill_in "party[datetime]", with: Time.new(2018, 01, 02, 12)
+
+			click_button "Create Party"
+
+			expect(page).to have_content("Add friends to create a party.")
+		end
 	end
 end
