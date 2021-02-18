@@ -31,7 +31,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[Viewing Party](https://veiwi.herokuapp.com/) is an application for friends to enjoy a movie night together. Users can search movies, create viewing parties, and invite friends to attend.
+[Viewing Party](https://viewi.herokuapp.com/) is an application for friends to enjoy a movie night together. Users can search movies, create viewing parties, and invite friends to attend.
 
 User stories tracked using [Github projects](https://github.com/foymikek/viewing_party/projects/1).
 
