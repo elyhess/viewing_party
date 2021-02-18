@@ -15,7 +15,7 @@
 ![](https://img.shields.io/badge/Ruby-2.5.3-orange)
 
 
-![Little Esty Shop](https://github.com/foymikek/viewing_party/blob/main/header.png)
+![Viewing Party](https://github.com/foymikek/viewing_party/blob/main/header.png)
 <!-- TABLE OF CONTENTS -->
 <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
 <ol>
@@ -31,15 +31,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[Viewing Party](https://bloque-party.herokuapp.com/) is an application for friends to enjoy a movie night together. Users can search movies, create viewing parties, and invite friends to attend.
+[Viewing Party](https://veiwi.herokuapp.com/) is an application for friends to enjoy a movie night together. Users can search movies, create viewing parties, and invite friends to attend.
 
 User stories tracked using [Github projects](https://github.com/foymikek/viewing_party/projects/1).
-
-### Skills Developed
-* Practiced MVC concepts, effectively staying within rails conventions
-* Built secure authentication / authorization from the ground up
-* Consumed github API and utilized POROS as a way to apply OOP principals
-* Deployed application on [Heroku](https://bloque-party.herokuapp.com/)
 
 <!-- PROJECT BOARD -->
 ## Project Board
@@ -48,7 +42,7 @@ Check out the [Project board](https://github.com/foymikek/viewing_party/projects
 <!-- DATABBASE SCHEMA -->
 ## Database Schema
 
-![Schema](https://github.com/foymikek/viewing_party/blob/main/schema.png)
+![Schema](https://github.com/elyhess/viewing_party/blob/main/schema.png)
 
 <!-- BUILT WITH -->
 ## Built With
