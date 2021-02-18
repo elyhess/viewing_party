@@ -1,6 +1,14 @@
-<%= button_to "Top Rated Movies", movies_path, params: { top_movies: true }, method: :get, class: "btn btn-outline-primary btn-lg"  %>
-<%= button_to "Top Trending Movies", movies_path, params: { trending_movies: true }, method: :get, class: "btn btn-outline-primary btn-lg"  %>
-<%= button_to "Upcoming Movies", movies_path, params: { upcoming_movies: true }, method: :get, class: "btn btn-outline-primary btn-lg"  %>
+<div class="btn-group d-flex" role="group" aria-label="...">
+  <button type="button" class="btn btn-default w-100">
+    <%= button_to "Upcoming Movies", movies_path, params: { upcoming_movies: true }, method: :get, class: "btn btn-outline-primary btn-lg w-100"  %>
+  </button>
+  <button type="button" class="btn btn-default w-100">
+    <%= button_to "Top Trending Movies", movies_path, params: { trending_movies: true }, method: :get, class: "btn btn-outline-primary btn-lg w-100"  %>
+  </button>
+  <button type="button" class="btn btn-default w-100">
+    <%= button_to "Top Rated Movies", movies_path, params: { top_movies: true }, method: :get, class: "btn btn-outline-primary btn-lg w-100"  %>
+  </button>
+</div>
 
 <%= form_with url: movies_path, method: :get, local: true do |f| %>
 

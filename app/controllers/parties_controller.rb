@@ -10,14 +10,17 @@ class PartiesController < ApplicationController
   def create
     @party = Current.user.parties.new(party_params.merge(movie_id: @movie.id))
     if @party.save
-      params[:party][:party_guests].each do |id|
-        @party.party_guests.create(user_id: id, party_id: @party.id)
+      if params[:party][:party_guests].present?
+        @party.add_party_guests(params[:party][:party_guests])
+        redirect_to dashboard_path
+      else
+        redirect_to new_party_path, notice: "Add friends to create a party."
       end
-      redirect_to dashboard_path
     else
       render :new
     end
   end
+
 
   private
 
