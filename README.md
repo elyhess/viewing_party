@@ -20,6 +20,7 @@
 <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
 <ol>
   <li><a href="#about-the-project">About The Project</a>
+  <li><a href="#learning-goals">About The Project</a>
   <li><a href="#project-board">Project Board</a></li>
   <li><a href="#database-schema">Database Schema</a></li>
   <li><a href="#built-with">Built With</a>
@@ -34,6 +35,15 @@
 [Viewing Party](https://viewi.herokuapp.com/) is an application for friends to enjoy a movie night together. Users can search movies, create viewing parties, and invite friends to attend.
 
 User stories tracked using [Github projects](https://github.com/foymikek/viewing_party/projects/1).
+
+<!-- LEARNING GOALS -->
+Consume JSON APIs 
+Build an application that requires basic authentication
+Organize and refactor code to be more maintainable 
+Implement a self-referential relationship in ActiveRecord 
+Apply RuboCop’s style guide for code quality 
+Utilize Continuous Integration using Travis CI 
+Deploy to Heroku 
 
 <!-- PROJECT BOARD -->
 ## Project Board
