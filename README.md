@@ -39,13 +39,13 @@ User stories tracked using [Github projects](https://github.com/foymikek/viewing
 <!-- LEARNING GOALS -->
 ## Leearning Goals
 
-Consume JSON APIs 
-Build an application that requires basic authentication
-Organize and refactor code to be more maintainable 
-Implement a self-referential relationship in ActiveRecord 
-Apply RuboCop’s style guide for code quality 
-Utilize Continuous Integration using Travis CI 
-Deploy to Heroku 
+* Consume JSON APIs 
+* Build an application that requires basic authentication
+* Organize and refactor code to be more maintainable 
+* Implement a self-referential relationship in ActiveRecord 
+* Apply RuboCop’s style guide for code quality 
+* Utilize Continuous Integration using Travis CI 
+* Deploy to Heroku 
 
 <!-- PROJECT BOARD -->
 ## Project Board
