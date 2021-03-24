@@ -37,6 +37,8 @@
 User stories tracked using [Github projects](https://github.com/foymikek/viewing_party/projects/1).
 
 <!-- LEARNING GOALS -->
+## Leearning Goals
+
 Consume JSON APIs 
 Build an application that requires basic authentication
 Organize and refactor code to be more maintainable 
